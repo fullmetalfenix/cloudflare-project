@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html amp lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <title>Landing Page</title>
+  <link rel="canonical" href="https://website-url-here/">
+  <link rel="shortcut icon" href="./img/favicon.ico" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta name="description" content="Landing page description here">
+
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+
+
+
+  <style amp-boilerplate>
+    body {
+      -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      animation: -amp-start 8s steps(1, end) 0s 1 normal both
+    }
+
+    @-webkit-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-moz-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-ms-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-o-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+  </style><noscript>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none
+      }
+    </style>
+  </noscript>
+
+  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+  <script async custom-element="amp-fx-collection"
+    src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style amp-custom>
+    /* custom css here */
+    :root {
+      --box-shadow-black: rgba(0, 0, 0, .07);
+      --opaque-white: rgba(250, 250, 250, .87);
+      --orange: #FF9800;
+      --opaque-black: rgba(0, 0, 0, .87);
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Navigation Styles*/
+    nav {
+      display: flex;
+      max-width: 1200px;
+      margin: 0px auto;
+      height: 80px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      width: 800px;
+      justify-content: space-around;
+    }
+
+    #mobile-nav {
+      display: none;
+    }
+
+    #navigation-container {
+      background: black;
+    }
+
+    #desktop-nav ul li a {
+      color: var(--opaque-white);
+      text-decoration: none;
+      border-bottom: 5px solid var(--orange);
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    #what,
+    #why,
+    #setup,
+    #repo {
+      margin-top: -30px;
+      display: inline-block;
+      position: absolute;
+    }
+
+    /****** Hero Section ***************/
+    #hero {
+      min-height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #hero-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    #hero-right,
+    #hero-left {
+      width: 50%;
+    }
+
+    #hero-left h1 {
+      font-size: 52px;
+      color: var(--opaque-black);
+      margin-top: 0px;
+    }
+
+    #hero-left p {
+      line-height: 1.5;
+      font-size: 22px;
+    }
+
+    #hero-left a button {
+      width: 100%;
+      color: var(--opaque-black);
+      font-size: 22px;
+      text-align: center;
+      border: 4px solid var(--opaque-black);
+      padding: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: .5s;
+      background: white;
+    }
+
+    #hero-left a button:hover {
+      color: var(--opaque-white);
+      background: var(--opaque-black);
+      cursor: pointer;
+    }
+
+    #hero-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /***************** Triptic section ****************/
+    section#triptic-section {
+      margin-top: 80px;
+      padding: 80px 0px;
+      background: #F5F5F5;
+    }
+
+    #triptic-section h2 {
+      text-decoration: underline 5px var(--orange);
+      font-size: 42px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    #triptic-section-inner {
+      display: flex;
+      margin: 0px auto;
+      max-width: 1200px;
+    }
+
+    .triptic-section-col {
+      padding: 20px;
+      box-sizing: content-box;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 0;
+    }
+
+    .triptic-card {
+      box-shadow: 0px 0px 8px var(--box-shadow-black);
+      min-height: 650px;
+      background: white;
+      color: var(--opaque-black);
+      border-radius: 20px;
+    }
+
+    .triptic-card-content {
+      padding: 20px 20px 0px;
+    }
+
+    .triptic-card p {
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .triptic-card a {
+      color: var(--opaque-black)
+    }
+
+    .triptic-card h3 {
+      font-size: 22px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .card-img-container {
+      text-align: center;
+    }
+
+    /*********** Email Section **************/
+
+    #form-section {
+      background: black;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    #email-form {
+      max-width: 600px;
+      margin: 0px auto;
+      padding: 20px;
+      display: flex;
+      border: none;
+      color: var(--opaque-white);
+      align-items: center;
+      justify-content: center;
+    }
+
+    #email-form fieldset {
+      display: flex;
+      flex-direction: column;
+      border: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    input[type="email"] {
+      padding: 20px 20px;
+      font-size: 18px;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 40px;
+    }
+
+    input[type="submit"] {
+      padding: 20px 50px;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 50px;
+      min-width: 60%;
+    }
+
+    input[type="submit"]:hover {
+      cursor: pointer;
+      box-shadow: 0px 0px 10px rgb(255 255 255 / 80%);
+    }
+
+    label span {
+      margin-bottom: 10px;
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      font-size: 18px;
+    }
+
+    #form-section h2 {
+      color: var(--opaque-white);
+      font-size: 42px;
+      text-align: center;
+    }
+
+    #form-text {
+      color: var(--opaque-white);
+      max-width: 686px;
+      font-size: 18px;
+      line-height: 1.75;
+      text-indent: 20px;
+      margin: 60px auto;
+    }
+
+    /*** Why Section ***/
+
+    #why-section {
+      padding: 80px 0px;
+    }
+
+    #why-section h2 {
+      font-size: 42px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    #why-section .why-container {
+      max-width: 1200px;
+      margin: 0px auto;
+    }
+
+    .why-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .why-left,
+    .why-right {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 0;
+    }
+
+    .why-right p {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .why-right li {
+      line-height: 1.35;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+    }
+
+    /*helper classes*/
+
+    .orange {
+      color: var(--orange)
+    }
+
+    .orange-underline {
+      text-decoration: underline 5px var(--orange);
+    }
+
+    div[submit-success],
+    div[submit-error] {
+      margin-top: 40px;
+      background: white;
+      color: var(--opaque-black);
+      padding: 20px 40px;
+
+    }
+
+    @media (max-width: 980px) {
+
+      #mobile-nav {
+        background: black;
+        height: 70px;
+        padding: 0px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      #mobile-nav button {
+        background: black;
+        border: none;
+      }
+
+      #desktop-nav {
+        display: none;
+      }
+
+      #mobile-menu-button svg {
+        height: 42px;
+        color: white;
+      }
+
+      #sidebar {
+        background: black;
+        display: block;
+        min-width: 210px;
+        padding: 80px 20px 20px;
+      }
+
+      #sidebar a {
+        display: block;
+        font-size: 22px;
+        font-weight: 600;
+        text-decoration: none;
+        color: rgba(255, 255, 255, .87);
+        padding: 15px 10px;
+        margin: 25px 0px;
+        text-decoration: underline 4px #ffc31e;
+      }
+
+      #side-bar-button {
+        width: 100%;
+        padding: 20px 20px;
+        font-size: 18px;
+        border-radius: 0px;
+        border: none;
+        background: white;
+        box-shadow: 0px 0px 5px rgb(0 0 0 / 17%);
+        font-weight: 600;
+        color: var(--opaque-black);
+        margin-top: 12px;
+      }
+
+
+
+
+      /*Hero Section*/
+      #hero-right,
+      #hero-left {
+        width: 100%;
+      }
+
+      #hero-left h1 {
+        font-size: 42px;
+      }
+
+      #hero-container {
+        display: block;
+        margin-top: 20px;
+        padding: 0px 15px;
+      }
+
+      #hero-right {
+        display: none;
+      }
+
+      /* Triptic Section*/
+      #triptic-section-inner {
+        flex-direction: column;
+      }
+
+      .triptic-section-col {
+        padding: 0px 15px 60px;
+
+      }
+
+      /* Why Section */
+      .why-left {
+        display: none;
+      }
+
+      .why-right {
+        padding: 15px;
+      }
+
+      .why-right p {
+        text-align: center;
+        margin-bottom: 45px;
+      }
+
+      /* Form section */
+      #form-text {
+        padding: 15px;
+
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <amp-sidebar id="sidebar" layout="nodisplay" side="right">
+    <a href="#what">What?</a>
+    <a href="#why">Why?</a>
+    <a href="#setup">Set Up</a>
+    <a href="#repo">View Repo</a>
+  </amp-sidebar>
+  <div id="mobile-nav">
+    <amp-img src="./cloudflare.svg" width="64" height="64" alt=logo"></amp-img>
+    <button on="tap:sidebar.toggle" id="mobile-menu-button" aria-label="side menu button">
+      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
+        class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path fill="currentColor"
+          d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+        </path>
+      </svg>
+    </button>
+  </div>
+  <div id="navigation-container">
+    <nav id="desktop-nav">
+      <span id="logo">
+        <amp-img src="./cloudflare.svg" width="64" height="64" alt=logo"></amp-img>
+      </span>
+      <ul>
+        <li><a href="#what">What?</a></li>
+        <li><a href="#why">Why?</a></li>
+        <li><a href="#setup">Set Up.</a></li>
+        <li><a href="#repo">View Repo.</a></li>
+      </ul>
+    </nav>
+  </div>
+  <section id="hero">
+    <div id="hero-container">
+      <div id="hero-left">
+        <h1>A Scary Fast Landing Page built with AMP & Cloudflare Pages<span class="orange">.</span></h1>
+        <p>What do you get when you combine Cloudflare Pages as a platform, a landing page built with the AMP framework
+          and Cloudflare workers for serverless form processing? The patential of having lightning fast landing pages
+          with near perfect <a href="https://developers.google.com/web/tools/lighthouse/">lighthouse</a> scores right
+          from the start.</p>
+        <a href="#what" alt="learn more about Cloudflare workers, cloudflare pages and AMP"><button>Learn More
+          </button></a>
+      </div>
+      <div id="hero-right">
+        <amp-img src="./cloudflare.svg" width="288" height="432" id="hero-image" alt=""></amp-img>
+      </div>
+    </div>
+  </section>
+
+  <main>
+
+    <section id="triptic-section">
+      <div id="what"></div>
+      <h2 class="orange-underline">What's At Work</h2>
+      <div id="triptic-section-inner">
+        <div class="triptic-section-col">
+          <div class="triptic-card">
+            <div class="card-img-container">
+              <amp-img src="./cloudflare-pages.svg" width="300" height="200" alt=""></amp-img>
+            </div>
+            <div class="triptic-card-content">
+              <h3 class="orange-underline">Cloudflare Pages</h3>
+              <p>Cloudflare pages is a platform designed to "Build fast sites. In record time". Cloudflare pages can
+                host your JAM Stack + static sites on Cloudflare's servers starting at no cost. Utilizing automated
+                delivery straight from your Github repo, deployment is super easy with Cloudflare pages - just choose
+                your branch and push your code and Cloudflare pages will deploy for you. </p>
+              <a href="https://pages.cloudflare.com/">Learn More About Cloudflare Pages</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="triptic-section-col">
+          <div class="triptic-card">
+            <div class="card-img-container">
+              <amp-img src="./amp.jfif" width="300" height="200" alt=""></amp-img>
+            </div>
+            <div class="triptic-card-content">
+              <h3 class="orange-underline">The AMP Framework</h3>
+              <p>The AMP Framework has been designed "to easily create user-first experiences for the web". It is made
+                with plenty of modular components you can drop in to add interactivity while not having to concentrate
+                on speed and user experience for site visitors as AMP components are designed with those things in mind
+                already. Cloudflare offers additional benifits for AMP sites you can <a
+                  href="https://blog.cloudflare.com/real-urls-for-amp-cached-content-using-cloudflare-workers/">read
+                  about here</a></p>
+              <a href="https://amp.dev/about/websites/">Learn More About AMP.</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="triptic-section-col">
+          <div class="triptic-card">
+            <div class="card-img-container">
+              <amp-img src="./cloudflare-workers.svg" width="300" height="200" alt=""></amp-img>
+            </div>
+            <div class="triptic-card-content">
+              <h3 class="orange-underline">Cloudflare Workers</h3>
+              <p>Cloudflare workers is a serverless code platform offered by Cloudflare. It features automatic scaling
+                across thousands of servers as well as 0ms cold starts so your code runs with no delay. You can also run
+                and test code locally with the Wrangler CLI before deploying. </p>
+              <a href="https://workers.cloudflare.com/">Learn More About Cloudflare Workers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="why-section">
+      <div id="why"></div>
+      <h2 class="orange-underline">Why Use It?</h2>
+      <div class="why-container">
+        <div class="why-left">
+          <amp-img src="./cloudflare.svg" width="440" height="332" alt=""></amp-img>
+        </div>
+        <div class="why-right">
+          <p>There are a number of reasons why you should consider hosting an AMP site on Cloudflare Pages: </p>
+          <ul>
+            <li>Cloudflare pages is "developer focused" and deploying your sites to the platform can be as easy as
+              pushing your code from your text editor straight to Github - Cloudflare pages handles the details for you.
+            </li>
+            <li>It's sometimes posible to weigh down a sites preformance with features but AMP landing pages can be
+              feature rich while still demanding great preformance. AMP can also help your site's preformance in that
+              "Domains built with AMP are 5 times more likely to pass Core Web Vitals metrics than non-AMP!" (AMP.dev)
+            </li>
+            <li>Cloudflare workers offer a scaleable cost effective serverless solution. Cloudflare workers support many
+              different languages with additional support for 0ms cold starts saving your sites preformance scores
+              precious Milliseconds </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section id="form-section">
+      <div id="setup"></div>
+      <h2 class="orange-underline">See the Setup.</h2>
+      <p id='form-text'>Enter your email below to get sent a link to the github repo walking through what's going on
+        with this landing page. Alternatively, just go straight to the repository now using <a>this link </a>. Really
+        this section is just to demonstrate how to process a serverless AMP form and trigger an email to be sent from
+        sendgrid using Cloudflare workers</p>
+      <form id="email-form" method="post" action-xhr="http://127.0.0.1:8787" target="_top"
+        custom-validation-reporting="as-you-go">
+        <fieldset>
+          <label>
+            <span>Enter Your Email To Get Sent The Repo Link:</span>
+            <input type="email" name="email" placeholder="ex example@example.com" required>
+          </label>
+          <br>
+          <input type="submit" value="Get The Link">
+          <div submit-success>
+            Horray! Check your email soon for the link!
+          </div>
+          <div submit-error>
+            Uh Oh! Something went wrong with your submision!
+          </div>
+
+        </fieldset>
+      </form>
+    </section>
+
+  </main>
+  <footer>
+    <p>*This project was completed as part of the Cloudflare Developer
+      Summer Challenge 2021 and is not affiliated with Cloudflare or AMP in any way.</p>
+  </footer>
+  </div>
+</body>
+
+</html>
