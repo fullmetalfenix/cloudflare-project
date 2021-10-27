@@ -11,8 +11,8 @@ There are three parts to creating an AMP page with a serverless contact form: Co
 First I suggest you go to https://amp.dev/ and checkout exactly what AMP is about - You may already be familiar with it but its evolving all the time so even if you already have some experience with it I would take another look before beginning any project in AMP. You can also find some starter templates there but the starter code for the most basic AMP website looks like this:
  
  
- 
-`<!doctype html>
+` 
+<!doctype html>
 <html amp lang="en">
   <head>
     <meta charset="utf-8">
@@ -25,8 +25,8 @@ First I suggest you go to https://amp.dev/ and checkout exactly what AMP is abou
   <body>
     <h1 id="hello">Hello AMPHTML World!</h1>
   </body>
-</html>`
- 
+</html>
+ `
 You can build off this template to make your own site using the components [here](https://amp.dev/documentation/components/) and then by following the associated instructions for use but for this project I will be concentrating on just one - the AMP form component [here](https://amp.dev/documentation/components/amp-form/?format=websites)
  
 Forms in AMP have extensive documentation and can be implemented in a number of ways so this is just one way you can do it. AMP has some specific guidelines when it comes to form submissions concerning CORS and request origins that can make using forms a bit more complicated than usual but here’s how I did it -starting with the front end:
