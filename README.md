@@ -8,25 +8,11 @@ There are three parts to creating an AMP page with a serverless contact form: Co
  
 ## Part One: Coding the AMP page
  
-First I suggest you go to https://amp.dev/ and checkout exactly what AMP is about - You may already be familiar with it but its evolving all the time so even if you already have some experience with it I would take another look before beginning any project in AMP. You can also find some starter templates there but the starter code for the most basic AMP website looks like this:
+First I suggest you go to https://amp.dev/ and checkout exactly what AMP is about - You may already be familiar with it but its evolving all the time so even if you already have some experience with it I would take another look before beginning any project in AMP. You can also find some starter templates there but the starter code for the most basic AMP website looks like [this](https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/?format=websites) 
  
  
-` 
-<!doctype html>
-<html amp lang="en">
-  <head>
-    <meta charset="utf-8">
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <title>Hello, AMPs</title>
-    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-  </head>
-  <body>
-    <h1 id="hello">Hello AMPHTML World!</h1>
-  </body>
-</html>
- `
+
+
 You can build off this template to make your own site using the components [here](https://amp.dev/documentation/components/) and then by following the associated instructions for use but for this project I will be concentrating on just one - the AMP form component [here](https://amp.dev/documentation/components/amp-form/?format=websites)
  
 Forms in AMP have extensive documentation and can be implemented in a number of ways so this is just one way you can do it. AMP has some specific guidelines when it comes to form submissions concerning CORS and request origins that can make using forms a bit more complicated than usual but here’s how I did it -starting with the front end:
